@@ -1,0 +1,153 @@
+body{
+    margin: none;
+    outline: none;
+    padding: none;
+}
+.navbar{
+    background-color: lightgreen;
+    height: 90px;
+    width: 100%;
+    padding: 30px;
+}
+.nav-link{
+    color: black;
+    padding: 10px 15px 0px 15px;
+}
+.logoBareksa{
+    padding: 0px 10px;
+}
+.tombolnav{
+    display: flex;
+    padding-left: 20px;
+}
+
+.Login{
+    padding-top: 7px;
+    padding-left: 350%;
+    padding-right: 20px;
+    color: black;
+}
+.Daftar{
+    border-radius: 15px;
+    background-color: black;
+    color: lightgreen;
+    padding: 5px 20px;
+}
+
+.jumbotron{
+    display: flex;
+    background-color: white;
+    justify-content: space-evenly;
+}
+
+.display-4{
+    font-family: cursive;
+    padding-bottom: 15px;
+}
+.gambarbareksa{
+    border-radius: 8px;
+    height: 305px;
+    width: 541px;
+}
+
+.secondJumbo{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 193px;
+    background-color: whitesmoke;
+}
+.fact1, .fact2, .fact3, .fact4, .fact5{
+    padding: 20px;
+}
+.purplehead{
+    color:  #5a4781;
+    font-size: 55px;
+    font-weight: 400;
+}
+.media{
+    background-color: lavender;
+    padding: 30px 35px;
+    height: 303px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.media-body, .med2, .med3,.med4{
+    width: 25%;
+    padding: 10px 35px;
+}
+.rev{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    color: grey;
+}
+
+.pilihaninvest{
+    padding: 35px 50px;
+    height: 450px;
+    width: 100%;
+}
+.chose{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.reksa, .sbn, .umroh{
+    width: 350px;
+    height: 270px;
+    background-color: seagreen;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: whitesmoke;
+}
+.tomboll{
+    color: wheat;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dekatfoot{
+    width: 100%;
+    height: 396px;
+    display: flex;
+    justify-content: space-between;
+}
+.Keloladana{
+    padding: 75px 90px;
+    width: 70%;
+}
+.besarbawah{
+    font-size: 25px;
+    font-weight: 500;
+}
+.foot{
+    background-color: cornsilk;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.followus, .followus2{
+    padding: 5px 50px;
+    width: 50%;
+    height: 200;
+}
+.followus2{
+    padding: 55px;
+    font-weight: 500;
+}
+.khusus{
+    display: flex;
+    justify-content: space-evenly;
+}
+.a1{
+    padding: 10px 0px;
+}
+.a2{
+    color: black;
+    cursor: pointer;
+}
+.last{
+    padding-top: 20px;
+    height: 50px;
+    color:grey;
+    font-size: 15px;
+}
