@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAYOUT</title>
+    <style>
+        .custom-btn{
+            background-color: cadetblue;
+            color: darkslategray;
+            border-radius: 10px;
+            padding: 10px 30px; /*pad atas bawah 10, kiri kanan 30*/ 
+            /* Klo  2 angka di padding, BERARTI ANGKA 1 UNTUK VERTIKAL, ANGKA 2 UNTUK HORIZONTAL*/
+            /* klo 4 angka brrti untuk (urutan) atas, kanan, bawah, kiri */
+            outline: none;
+            /* ada yg namanya HOVER itu pas cursor di atas property nanti bs distyling berbeda */
+        }
+        .custom-btn-spc:hover {
+            background-color: tomato;
+            color: thistle;
+            outline: none;
+        }
+        .custom-btn-spc{
+            background-color: teal;
+            color: black;
+            outline: none;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .part1{
+            background-color: burlywood;
+            padding: 30px;
+
+        }
+        .ins1{
+            color: darkgreen;
+            font-size: larger;
+            font-family: fantasy;
+        }
+        .part2{
+            background-color: cornsilk;
+            color: coral;
+        }
+        .part3{
+            background: black;
+            color: cornsilk;
+        }
+        .content-container{
+            display: flex;
+            flex-direction: row-reverse; 
+            /* kalo row-reverse itu bikin urutan kebalik tp sebaris */
+            /* flex-direction: row;  */ /* bikin samping-samping atau isinya sebaris */
+        }
+        .center{
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- CLASS -->
+    <button class="custom-btn">
+        Tombol 1
+    </button>
+    <button class="custom-btn">
+        Tombol 2
+    </button>
+    <button class="custom-btn-spc">
+        Tombol Hover
+    </button>
+
+    <!-- DIV = DIVIDER -->
+    <div class="part1">
+        <div class="ins1">
+            Part 1
+        </div>
+    </div>
+    <div class="part2">
+        Part 2
+    </div>
+    <div class="part3">
+        Part 3
+    </div>
+    
+    <!-- Flexbox -->
+    <!-- css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-basics -->
+    <div class="content-container center">
+        <div>ini isi 1 &nbsp;</div>
+        <div>ini isi 2 &nbsp;</div>
+        <div>ini isi 3 &nbsp;</div>
+    </div>
+    <div class="content-container"></div>
+        <div>ini isi 4 &nbsp;</div>
+        <div>ini isi 5 &nbsp;</div>
+        <div>ini isi 6 &nbsp;</div>
+        <div>ini isi 7 &nbsp;</div>
+    </div>
+</body>
+</html>

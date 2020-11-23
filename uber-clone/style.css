@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  font-family: "Uber Move Medium";
+}
+
+@font-face {
+  font-family: "Uber Move Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Uber Move Medium"),
+    url("./fonts/UberMoveMedium.otf") format("woff");
+}
+
+@font-face {
+  font-family: "Uber Move Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Uber Move Bold"), url("./fonts/UberMoveBold.otf") format("woff");
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 12px 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  padding-left: 25px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  padding-right: 30px;
+}
+
+.header-items {
+  margin: 0 10px;
+  padding: 10px 10px;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.header-items:hover {
+  background-color: rgb(51, 51, 51);
+  transition: 250ms;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.signup-btn {
+  background-color: white;
+  color: black;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.body1{
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  height: 375px;
+  padding: 40px 60px 64px 60px;
+}
+
+.thetitle{
+  height: 128px;
+  width: 452.02px;
+  font-size: 52px;
+  font-weight: 500;
+}
+.thebodyfont{
+  font-size: 16px;
+  font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  letter-spacing: 0;
+  color: white;
+  line-height: 24px;
+}
+.learnmore-btn{
+  background-color: white;
+  color: black;
+  padding: 14px 25px;
+  line-height: 20px;
+  margin-top: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  outline: none;
+}
+
+.thecity{
+  padding-top: 18px;
+}
+.littlemenu{
+  display: flex;
+  justify-content: space-evenly;
+  height: 121px;
+  width: 1135.33px;
+  background-color: white;
+  padding: 64px;
+}
+.bod2{
+  background-image: url("./bg2.jpg");
+}
+.body3{
+  background-image: url("https://www.uber-assets.com/image/upload/v1556927537/assets/e4/ade93c-0b7b-4990-bda4-afef96793277/original/Modalities_banner_home.jpg");
+  /* height: 600px; */
+}
+.body4{
+  padding: 64px;
+  height: 684.3px;
+  background-color: white;
+
+}
+.insidebody4{
+  display: flex;
+  justify-content: space-evenly;
+}
+.body5{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  height: 494.41px;
+}
+.body6{
+  display: flex;
+  justify-content: space-evenly;
+  height: 320px;
+  padding: 64px;
+}
+.body7{
+  display: flex;
+  justify-content: space-evenly;
+  height: 213px;
+  padding: 64px;
+}
+
+.footer{
+  background-color: black;
+  color: white;
+  height: 791.33px;
+  padding: 64px;
+}
+.foot1{
+  display: flex;
+  width: 1135.25px;
+  height: 179.33px;
+}
+.foot1-1{
+  width: 744.83px;
+  height: 179.33px;
+}
+.ubw{
+  height: 112px;
+  position: relative;
+  font-family: UberMove, UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  align-items: center;
+  text-align: left;
+  font-weight: 400;
+  line-height: 112px;
+}
+.helpcenter{
+  margin-bottom: 48px;
+  font-size: inherit;
+  position: relative;
+  font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  font-weight: 400;
+}
+.foot1-2{
+  width: 354.42px;
+  height: 179.33px;
+  margin: none;
+  padding: none;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: right;
+}
+
+.foot2{
+  display: flex;
+  justify-content: space-evenly;
+  height: 260px;
+  width: 1135.25px;
+}
+.foot3{
+  display: flex;
+  justify-content: space-evenly;
+  height: 72px;
+  width: 1135.25px;
+}
+.foot3-1{
+  display: flex;
+  justify-content: space-evenly;
+  height: 72px;
+  width: 256.81px;
+}
+.foot3-2{
+  background-color: black;
+  width: 549.63px;
+  height: 72px;
+}
+.btn{
+  font-size: 14px;  
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.foot4{
+  display: flex;
+  height: 44px;
+  width: 1135.25px;
+}
+.foot4-1{
+  width: 256.81px;
+  font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 20px;
+  font-weight: normal;
+  font-size: 12px;
+}
+.foot4-2{
+  width: 513.68px;
+}
+.foot4-3{
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  width: 256.81px;
+}

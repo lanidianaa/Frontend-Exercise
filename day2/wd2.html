@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .content-container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
+    .square {
+      width: 250px;
+      background-color: lightseagreen;
+      cursor: pointer;
+    }
+
+    .graph {
+      justify-content: space-between;
+      height: 300px;
+    }
+
+    #satu:hover,
+    #dua:hover,
+    #tiga:hover,
+    #empat:hover,
+    #lima:hover {
+      background-color: teal;
+    }
+  </style>
+  <body>
+    <div class="content-container graph">
+      <div
+        id="satu"
+        class="square"
+        onclick="valueAlert('satu')"
+        style="height: 10%"
+      ></div>
+      <div
+        id="dua"
+        class="square"
+        onclick="valueAlert('dua')"
+        style="height: 30%"
+      ></div>
+      <div
+        id="tiga"
+        class="square"
+        onclick="valueAlert('tiga')"
+        style="height: 20%"
+      ></div>
+      <div
+        id="empat"
+        class="square"
+        onclick="valueAlert('empat')"
+        style="height: 60%"
+      ></div>
+      <div
+        id="lima"
+        class="square"
+        onclick="valueAlert('lima')"
+        style="height: 40%"
+      ></div>
+    </div>
+    <div>
+      <button onclick="sort()">Sort</button>
+      <button onclick="back()">Back to the start</button>
+    </div>
+  </body>
+  <script>
+    let num = [];
+    let newNum = [];
+    let position = [satu, dua, tiga, empat, lima];
+
+    function change(arr) {
+      return (
+        (document.getElementById("satu").style.height = `${arr[0]}%`),
+        (document.getElementById("dua").style.height = `${arr[1]}%`),
+        (document.getElementById("tiga").style.height = `${arr[2]}%`),
+        (document.getElementById("empat").style.height = `${arr[3]}%`),
+        (document.getElementById("lima").style.height = `${arr[4]}%`)
+      );
+    }
+    function sort() {
+      var satu = document
+        .getElementById("satu")
+        .style.getPropertyValue("height");
+      num.push(satu);
+      var dua = document.getElementById("dua").style.getPropertyValue("height");
+      num.push(dua);
+      var tiga = document
+        .getElementById("tiga")
+        .style.getPropertyValue("height");
+      num.push(tiga);
+      var empat = document
+        .getElementById("empat")
+        .style.getPropertyValue("height");
+      num.push(empat);
+      var lima = document
+        .getElementById("lima")
+        .style.getPropertyValue("height");
+      num.push(lima);
+
+      newNum = num.map((val) => parseInt(val)).sort((a,b) => a-b);
+      
+      change(newNum);
+    }
+
+    function back() {
+      num = num.map((val) => {
+        return parseInt(val);
+      });
+      change(num);
+      num = [];
+    }
+
+    function valueAlert(n) {
+      var persen = document
+        .getElementById(`${n}`)
+        .style.getPropertyValue("height");
+      alert(`Value: ${persen}`);
+    }
+  </script>
+</html>

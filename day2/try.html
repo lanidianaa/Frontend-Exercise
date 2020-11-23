@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1-2</title>
+    <style>
+        body {
+            background: -webkit-linear-gradient(bottom, #2dbd6e, #a6f77b);
+            background-repeat: no-repeat;
+       }
+       #judul{
+            background: #fbfbfb;
+            border-radius: 10px;
+            box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+            height: 20px;
+            width: 379px;
+            font-family: "Raleway Thin", sans-serif;
+            letter-spacing: 4px;
+            padding-bottom: 38px;
+            padding-top: 13px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #input{
+            background: #fbfbfb;
+            border-radius: 8px;
+            box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+            height: 515px;
+            width: 379px;
+        }
+        #tombol{
+            border-radius: 30px;
+            font-size: medium;
+            color: black;
+            background-color: aquamarine;
+        }
+        .input-group {
+            position: relative;
+            margin: 40px 0 20px;
+          }
+          
+          input {
+            font-size: 18px;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            width: 350px;
+            border: none;
+            border-bottom: 1px solid #757575;
+          }
+          
+          input:focus {
+            outline: none;
+          }
+          
+          label {
+            color: #999;
+            font-size: 18px;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            left: 5px;
+            top: 10px;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+          }
+          
+          input:focus ~ label,
+          input:valid ~ label {
+            top: -20px;
+            font-size: 14px;
+            color: #4285f4;
+          }
+          
+          .bar {
+            position: relative;
+            display:block;
+            width:365px;
+          }
+          
+          .bar:before,
+          .bar:after {
+            content: '';
+            height: 2px;
+            width: 0;
+            bottom: 1px;
+            position: absolute;
+            background: #4285f4;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+          }
+        
+          .bar:before {
+            left: 50%;
+          }
+          
+          .bar:after {
+            right: 50%;
+          }
+          
+          input:focus ~ .bar:before,
+          input:focus ~ .bar:after {
+            width: 50%;
+          }
+          
+          .highlight {
+            position: absolute;
+            height: 60%;
+            width: 100px;
+            top: 25%;
+            left: 0;
+            pointer-events: none;
+            opacity: 0.5;
+          }
+          
+          input:focus ~ .highlight {
+            -webkit-animation: inputHighlighter 0.3s ease;
+            -moz-animation: inputHighlighter 0.3s ease;
+            animation: inputHighlighter 0.3s ease;
+          }
+          .SignIn{
+            background: salmon;
+            border-radius: 8px;
+            box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+            height: 35px;
+            padding-top: 1px;
+            padding-bottom: 20px;
+            width: 379px;
+            font-family: "Raleway Thin", sans-serif;
+          }
+          /* animations */
+          @-webkit-keyframes inputHighlighter {
+            from { background: #4285f4; }
+            to   { width: 0; background: transparent; }
+          }
+          @-moz-keyframes inputHighlighter {
+            from { background: #4285f4; }
+            to   { width: 0; background: transparent; }
+          }
+          @keyframes inputHighlighter {
+            from { background: #4285f4; }
+            to   { width: 0; background: transparent; }
+          }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="judul">
+            <strong><p>REGISTRATION FORM</p></strong>
+        </div>
+        <div id="input">
+            <br>
+            <div class="input-group">
+                <input type="text" id="fullname" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Full Name</label>
+            </div>
+            <div class="input-group">
+                <input type="text" id="username" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Username</label>
+            </div>
+            <div class="input-group">
+                <input type="text" id="emailUser" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>E-mail</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Password</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="confirmPassword" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Confirm Password</label>
+            </div>
+            <button onclick="register()" id="tombol">Register</button>
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+        </div>
+        <div class="SignIn">
+          <strong><p>Already have an account? <a href="./interactive.html">Sign in</a>.</p></strong>
+        </div>
+      
+    </center>
+</body>
+
+<script>
+    function register(){
+        let database = [];
+        let full = document.getElementById("fullname").value;
+        let user = document.getElementById("username").value;
+        let email = document.getElementById("emailUser").value;
+        let pass = document.getElementById("password").value;
+        let confirmPass = document.getElementById("confirmPassword").value;
+        
+        if(pass !== confirmPass || user == 0 || email == 0 || pass == 0){
+            alert("Registrasi gagal! Invalid Password / Anda belum mengisi data dengan lengkap!");
+        } else{
+            database.push(
+                {name: full, username: user, email: email, password: pass, confirm: confirmPass},
+            );
+            console.log(database);
+            alert("Registrasi berhasil!");
+        }
+        document.getElementById("fullname").value = "";
+        document.getElementById("username").value = "";
+        document.getElementById("emailUser").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("confirmPassword").value = "";
+    }
+</script>
+</html>
